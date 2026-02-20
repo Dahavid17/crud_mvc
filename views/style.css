@@ -1,33 +1,96 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #5f6cd8, #7a4fd1);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1b316d, #2046a8);
+    color: #ffffff;
 }
+
+/* ================= LISTAGEM ================= */
+
+.containerlistar {
+    width: 900px;
+    max-width: 95%;
+    margin: 80px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    text-align: center;
+    color: #1a1a1a;
+}
+
+/* ================= FORM LOGIN / CADASTRO ================= */
 
 .container {
-    width: 750px;
+    background: radial-gradient(circle at top, #fea13f, #F97316);
+    padding: 40px;
+    border-radius: 18px;
+    width: 420px;
     max-width: 90%;
-    margin: 80px auto;
-    background: #f4f4f4;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    text-align: center;
-    overflow: hidden;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* corrigido */
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+    color: white;
+    gap: 10px;
 }
 
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: 0.2s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+.salvar-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #0A163D, #0D1B4C);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+.salvar-btn:hover {
+    transform: scale(1.03);
+}
+
+/* ================= TABELA ================= */
+
 h1 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    color: #0f1b3d;
+    font-weight: 700;
 }
 
 .btn-novo {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-decoration: none;
-    background: #6a1b9a;
-    color: white;
-    padding: 8px 15px;
+    background: #ff7a00;
+    color: #ffffff;
+    padding: 10px 18px;
     border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-novo:hover {
+    background: #e56d00;
 }
 
 table {
@@ -37,36 +100,146 @@ table {
 }
 
 th, td {
-    padding: 12px;
-    border: 1px solid #555;
-    text-align: center;
-    word-wrap: break-word;
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 🔥 Corrige o problema do email */
+td:nth-child(3) {
+    word-break: break-word;
 }
 
 th {
-    background-color: #e0e0e0;
+    background: #0f1b3d;
+    color: #ffffff;
+}
+
+tr:hover {
+    background-color: #f4f6f9;
 }
 
 th:last-child,
 td:last-child {
-    width: 160px;
+    width: 180px;
     white-space: nowrap;
 }
+
+/* ================= BOTÕES ================= */
 
 .btn-editar,
 .btn-excluir {
     text-decoration: none;
-    padding: 6px 10px;
+    padding: 7px 12px;
     border-radius: 4px;
     font-size: 14px;
     color: white;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 .btn-editar {
-    background-color: #4CAF50;
+    background-color: #162a5c;
+}
+
+.btn-editar:hover {
+    background-color: #0f1b3d;
 }
 
 .btn-excluir {
-    background-color: #f44336;
-    margin-left: 5px;
+    background-color: #ff7a00;
+    margin-left: 6px;
+}
+
+.btn-excluir:hover {
+    background-color: #e56d00;
+}
+
+/* ================= FORMULÁRIO ================= */
+
+.container-form {
+    width: 450px;
+    max-width: 95%;
+    margin: 100px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.container-form h2 {
+    margin-bottom: 25px;
+    color: #0f1b3d;
+}
+
+.container-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-form input {
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.container-form button {
+    padding: 12px;
+    background: #ff7a00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.container-form button:hover {
+    background: #e56d00;
+    transform: scale(1.03);
+}
+
+.btn-voltar {
+    display: block;
+    width: 150px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #0A163D, #0D1B4C);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    transform: scale(1.05);
+}
+
+/* ================= SELECT ================= */
+
+select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+    background: #f3e6ff;
+    color: #2b003d;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+select:hover {
+    border-color: #c84dff;
+    box-shadow: 0 0 10px rgba(200, 77, 255, 0.2);
+}
+
+select:focus {
+    border: 2px solid #c84dff;
+    box-shadow: 0 0 10px rgba(200, 77, 255, 0.4);
 }

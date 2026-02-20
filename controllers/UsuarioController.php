@@ -21,8 +21,8 @@ class UsuarioController {
         include 'views/criar.php';
     }
 
-    public function salvar($nome, $email) {
-        $this->model->criar($nome, $email);
+    public function salvar($nome, $email, $veiculo, $servico) {
+        $this->model->criar($nome, $email, $veiculo, $servico);
         header("Location: index.php");
         exit; 
     }
@@ -33,8 +33,8 @@ class UsuarioController {
         include 'views/editar.php';
     }
 
-    public function atualizar($id, $nome, $email) {
-        $this->model->atualizar($id, $nome, $email);
+    public function atualizar($id, $nome, $email, $veiculo, $servico) {
+        $this->model->atualizar($id, $nome, $email, $veiculo, $servico);
         header("Location: index.php");
         exit;
     }

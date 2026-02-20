@@ -16,8 +16,8 @@ if ($acao == 'criar') {
 
 if ($acao == 'salvar') {
 
-    if(isset($_POST['nome']) && isset($_POST['email'])) {
-        $controller->salvar($_POST['nome'], $_POST['email']);
+    if(isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['veiculo']) && isset($_POST['servico'])) {
+        $controller->salvar($_POST['nome'], $_POST['email'], $_POST['veiculo'], $_POST['servico']);
     }
 }
 
@@ -29,7 +29,7 @@ if ($acao == 'editar') {
 
 if ($acao == 'atualizar') {
     if(isset($_POST['id'])) {
-        $controller->atualizar($_POST['id'], $_POST['nome'], $_POST['email']);
+        $controller->atualizar($_POST['id'], $_POST['nome'], $_POST['email'], $_POST['veiculo'], $_POST['servico']);
     }
 }
 

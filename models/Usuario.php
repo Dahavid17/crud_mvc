@@ -12,11 +12,11 @@ class Usuario {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function criar($nome, $email) {
+    public function criar($nome, $email, $veiculo, $servico) {
         global $pdo;
         
-        $stmt = $pdo->prepare("INSERT INTO usuarios (nome, email) VALUES (?, ?)");
-        return $stmt->execute([$nome, $email]);
+        $stmt = $pdo->prepare("INSERT INTO usuarios (nome, email, veiculo, servico) VALUES (?, ?, ?, ?)");
+        return $stmt->execute([$nome, $email, $veiculo, $servico]);
     }
 
     public function buscar($id) {
@@ -27,11 +27,11 @@ class Usuario {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function atualizar($id, $nome, $email) {
+    public function atualizar($id, $nome, $email, $veiculo, $servico) {
         global $pdo;
         
-        $stmt = $pdo->prepare("UPDATE usuarios SET nome = ?, email = ? WHERE id = ?");
-        return $stmt->execute([$nome, $email, $id]);
+        $stmt = $pdo->prepare("UPDATE usuarios SET nome = ?, email = ?, veiculo = ?, servico = ? WHERE id = ?");
+        return $stmt->execute([$nome, $email, $veiculo, $servico, $id]);
     }
 
     public function excluir($id) {
